@@ -1,0 +1,32 @@
+{
+  "name": "carbon.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "prepack": "yarn build",
+    "build": "yarn clean && yarn build:tsc && yarn build:js",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "clean": "rmdir /s /q dist"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": "demd7362 <demd7362@gmail.com>",
+  "devDependencies": {
+    "@types/node": "^22.15.19",
+    "esbuild": "^0.25.4",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  }
+}
