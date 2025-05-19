@@ -1,0 +1,2 @@
+- npm test
+- (after update version) npm publish

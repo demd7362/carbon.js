@@ -1,8 +1,14 @@
 class Carbon {
     private readonly date: Date
 
-    constructor(date?: string | number | Date) {
-        this.date = date ? new Date(date) : new Date()
+    constructor(date?: string | number | Date | Carbon) {
+        if (date instanceof Carbon) {
+            this.date = new Date(date.date)
+        } else if(date){
+            this.date = new Date(date)
+        } else {
+            this.date = new Date()
+        }
     }
 
     // Getters for date components
@@ -59,11 +65,11 @@ class Carbon {
         return new Carbon()
     }
 
-    static parse(date: string | number | Date): Carbon {
+    static parse(date: string | number | Date | Carbon): Carbon {
         return new Carbon(date)
     }
 
-    static make(date?: string | number | Date): Carbon {
+    static make(date?: string | number | Date | Carbon): Carbon {
         return new Carbon(date)
     }
 
