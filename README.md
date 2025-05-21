@@ -23,17 +23,11 @@ Install the library via npm:
 npm install php-carbon.js
 ```
 
-Or include it directly in your project:
-
-```javascript
-import Carbon from 'php-carbon.js';
-```
-
 ## Usage
 Create a new Carbon instance and use its methods to manipulate and query dates:
 
 ```javascript
-const Carbon = require('php-carbon.js');
+import Carbon from 'php-carbon.js';
 
 // Create a new Carbon instance for the current date and time
 const now = Carbon.now();
@@ -116,7 +110,7 @@ console.log(future.diffForHumans()); // "in 10 days"
 - `copy()`: Creates a new Carbon instance with the same date.
 
 ## Contributing
-Contributions are welcome! Please submit a pull request or open an issue on the GitHub repository.
+Contributions are welcome! Please submit a pull request or open an issue on the [GitHub repository](https://github.com/demd7362/php-carbon.js)
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
